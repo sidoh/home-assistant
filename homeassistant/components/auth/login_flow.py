@@ -177,6 +177,7 @@ class LoginFlowIndexView(HomeAssistantView):
                 handler,
                 context={
                     "ip_address": request[KEY_REAL_IP],
+                    "cookies": request.cookies,
                     "credential_only": data.get("type") == "link_user",
                 },
             )
